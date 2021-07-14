@@ -14,10 +14,9 @@ const form = () => {
     setTodo(event.target.value);
   };
 
-  const addTodo = (todo: string) => {
+  const addTodo = (todo: string) => {   //storeにdispatch
     dispatch(Todo.actions.add(todo));
   };
-
   const pushAddTodo = () => {
     addTodo(todo);
     setTodo("");

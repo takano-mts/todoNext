@@ -10,7 +10,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 
 const TodoList = () => {
-  const todos = useSelector<Todo, Todo["todos"]>((state) => state.todos);
+  const todos = useSelector<Todo, Todo["todos"]>((state) => state.todos); //storeからstateの中身を取り出す
   const dispatch = useDispatch<Dispatch<PayloadAction<number>>>();
   const deleteTodo = (todoid: number) => {
     dispatch(todoSlice.actions.delete(todoid));
