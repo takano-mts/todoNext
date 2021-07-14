@@ -5,9 +5,7 @@ import Button from "@material-ui/core/Button";
 import DeleteIcon from "@material-ui/icons/Delete";
 import Form from "../components/form";
 import Grid from "@material-ui/core/Grid";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
+import Bar from "../components/appbar";
 
 const TodoList = () => {
   const todos = useSelector<Todo, Todo["todos"]>((state) => state.todos); //storeからstateの中身を取り出す
@@ -17,17 +15,13 @@ const TodoList = () => {
   };
   return (
     <>
-      <AppBar>
-        <Toolbar>
-          <Typography variant="h6">TODOあぷり</Typography>
-        </Toolbar>
-      </AppBar>
+      <Bar />
       <Grid
         container
         spacing={0}
         direction="column"
         alignItems="center"
-        justify="center"
+        justifyContent="center"
         style={{ minHeight: "100vh" }}
       >
         <Grid item xs={3}>
